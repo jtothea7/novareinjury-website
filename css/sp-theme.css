@@ -1,0 +1,32 @@
+/*
+  Client Theme: Novaré Injury Care
+  Slug: novare
+  
+  Override base.css variables here.
+  This file loads AFTER base.css in WordPress.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --color-primary: #1a2744;
+  --color-primary-hover: #243357;
+  --color-secondary: #c0392b;
+  --color-secondary-hover: #a93226;
+  --color-accent: #2c5f8a;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7fa;
+  --color-bg-dark: #1a2744;
+  --color-text: #2c2c2c;
+  --color-text-light: #5a6270;
+  --color-text-on-dark: #ffffff;
+  --color-text-muted: #8a8f99;
+  --color-border: #dfe3e8;
+  --color-link: #2c5f8a;
+  --color-link-hover: #c0392b;
+
+  /* Typography */
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}

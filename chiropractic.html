@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiropractor in Fort Myers and Lehigh Acres | Novaré Injury Care</title>
+  <link rel="stylesheet" href="css/sp-base.css">
+  <link rel="stylesheet" href="css/sp-theme.css">
+  <link rel="stylesheet" href="css/novare-styles.css">
+</head>
+<body>
+<style>
+/* WP-specific overrides */
+#sp-main{margin:0 !important;padding:0 !important}
+#sp-main>p:empty,#sp-main>p:first-child{display:none !important;margin:0 !important;padding:0 !important;line-height:0 !important;font-size:0 !important}
+.elementor-page #sp-main{padding:0 !important;margin:0 !important}
+
+/* Button color fixes */
+.btn--cyan{color:#fff !important;background:#41BEEA !important}
+.btn--cyan:hover{background:#2da5d1 !important;color:#fff !important}
+.btn--outline-white{color:#41BEEA !important;background:#fff !important;border-color:#fff !important}
+.btn--outline{color:#41BEEA !important;border-color:#41BEEA !important;background:transparent !important}
+.btn--outline:hover{background:#41BEEA !important;color:#fff !important}
+
+/* Hero: layout 60/40, Dr. Ivan bottom-aligned and right-shifted */
+.lp-hero{padding-bottom:0 !important;margin-bottom:0 !important;overflow:visible !important;min-height:auto !important}
+.lp-hero__content{padding-bottom:0 !important;padding-top:80px !important;margin-bottom:0 !important;align-items:flex-end !important}
+.lp-hero__text{flex:0 0 60% !important;align-self:center !important}
+.lp-hero__doctor{flex:0 0 40% !important;align-self:flex-end !important;margin-bottom:0 !important;padding-bottom:0 !important;display:flex !important;justify-content:flex-end !important;position:relative !important}
+.lp-hero__doctor img{height:546px !important;object-fit:cover !important;object-position:center bottom !important;margin-bottom:0 !important;padding-bottom:0 !important;display:block !important;vertical-align:bottom !important}
+.lp-hero__doctor-label{right:10px !important;top:35% !important}
+.lp-hero__doctor-label strong{display:block !important;font-size:15px !important;margin-bottom:0 !important;line-height:1.3 !important}
+.lp-hero__doctor-label span{opacity:0.7 !important;font-size:13px !important;margin-top:0 !important;line-height:1.2 !important}
+/* Hero buttons side-by-side */
+.lp-hero .hero__buttons{flex-direction:row !important;flex-wrap:nowrap !important}
+
+/* FAQ accordion body padding */
+.faq .accordion-body p{padding:12px 24px 18px !important;margin:0 !important;font-size:14px !important;color:rgba(255,255,255,0.92) !important;line-height:1.8 !important}
+.faq .accordion-body{border-top:none !important}
+.faq .accordion-item.active .accordion-body{padding:0 !important}
+
+/* Locations side-by-side */
+.locations__content{display:flex !important;gap:48px !important;align-items:flex-start !important}
+.locations__text{flex:1 !important}
+.locations__map{flex:1 !important}
+
+/* FAQ links — use white with underline so they're visible on cyan bg */
+.faq .accordion-body a,.faq .accordion-body__inner a{color:#fff !important;text-decoration:underline !important}
+
+/* Service area list — vertical list with pin icons */
+.service-area__list{display:grid !important;grid-template-columns:1fr 1fr 1fr !important;gap:8px 16px !important}
+.service-area__list span{display:flex !important;align-items:center !important;gap:8px !important;font-size:15px !important;color:#444 !important}
+.service-area__list span::before{content:'';display:inline-block;width:16px;height:16px;min-width:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2341BEEA' stroke-width='2'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z'/%3E%3Ccircle cx='12' cy='9' r='2.5'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat}
+
+/* Treatments grid */
+.treatments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 24px}
+
+/* Kill stray <p> tags WordPress injects */
+#sp-main>p{display:none !important}
+
+/* Integrated section: stack vertically, cards in a single row */
+.lp-integrated{flex-direction:column !important;gap:36px !important}
+.lp-integrated__right{grid-template-columns:repeat(4,1fr) !important;gap:24px !important;width:100% !important}
+.lp-integrated__left{max-width:720px !important}
+
+/* Force animate elements visible for local preview (no scroll JS) */
+.animate{opacity:1 !important;transform:none !important}
+
+/* ---- Mobile responsive ---- */
+@media(max-width:768px){
+  .lp-hero__content{flex-direction:column !important;padding:40px 20px 0 !important;text-align:center !important}
+  .lp-hero__text{flex:auto !important}
+  .lp-hero__text h1{font-size:28px !important}
+  .lp-hero__text p{font-size:15px !important}
+  .lp-hero .hero__buttons{flex-direction:column !important;gap:12px !important}
+  .lp-hero .hero__buttons .btn{width:100% !important;justify-content:center !important}
+  .lp-hero__doctor{flex:auto !important;justify-content:center !important}
+  .lp-hero__doctor img{height:360px !important}
+  .lp-hero__doctor-label{display:none !important}
+  .locations__content{flex-direction:column !important;gap:32px !important}
+  .locations__text,.locations__map{flex:auto !important;width:100% !important}
+  .locations__map iframe{min-height:350px !important}
+  .service-area__list{grid-template-columns:1fr 1fr !important}
+  .lp-integrated__right{grid-template-columns:1fr !important}
+  .treatments-grid{grid-template-columns:1fr !important}
+}
+@media(max-width:480px){
+  .lp-hero__text h1{font-size:24px !important}
+  .lp-hero__doctor img{height:280px !important}
+  .service-area__list{grid-template-columns:1fr !important}
+}
+</style>
+<section class="lp-hero">
+  <div class="lp-hero__content">
+    <div class="lp-hero__text">
+      <div class="hero__rating">
+        <span class="hero__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="hero__rating-text">5/5 | Trusted by 30,000+ patients for Chiropractic Care</span>
+      </div>
+      <h1><span>Relief That Lasts.</span><br>Chiropractor in Fort Myers and Lehigh Acres.</h1>
+      <p>Back pain, neck pain, sciatica, and headaches don't have to run your life. Novar&eacute; Injury Care and Rehab provides chiropractic care backed by digital imaging, medical oversight, and 30 years of clinical experience across two Southwest Florida locations. Same-day appointments available.</p>
+      <div class="hero__buttons">
+        <a href="https://novareinjurycare.com/contact" class="btn btn--cyan" style="color:#fff;background:#41BEEA;border:2px solid #41BEEA">Schedule Your Visit Today</a>
+        <a href="tel:2395794444" class="btn btn--outline-white" style="color:#41BEEA;background:#fff;border:2px solid #fff">Call : (239) 579-4444</a>
+      </div>
+    </div>
+    <div class="lp-hero__doctor">
+      <img src="images/dr-ivan-novare-injury-care-chiropractor.webp" alt="Dr. Ivan Bracic, DC — Chiropractor in Fort Myers">
+      <div class="lp-hero__doctor-label" style="line-height:1.3"><strong style="display:block;margin-bottom:2px">Dr. Ivan Bracic, DC</strong><span style="opacity:0.7;font-size:13px">Clinical Director</span></div>
+    </div>
+  </div>
+</section>
+<div class="scroll-stripe">
+  <div class="scroll-stripe__track">
+    <span>&#10038; 30+ Years Experience</span>
+    <span>&#10038; 30,000+ Patients Treated</span>
+    <span>&#10038; Digital X-Rays on First Visit</span>
+    <span>&#10038; Board-Certified MD Medical Director</span>
+    <span>&#10038; Bilingual: English &amp; Spanish</span>
+    <span>&#10038; Same-Day Appointments</span>
+    <span>&#10038; 30+ Years Experience</span>
+    <span>&#10038; 30,000+ Patients Treated</span>
+    <span>&#10038; Digital X-Rays on First Visit</span>
+    <span>&#10038; Board-Certified MD Medical Director</span>
+    <span>&#10038; Bilingual: English &amp; Spanish</span>
+    <span>&#10038; Same-Day Appointments</span>
+  </div>
+</div>
+<section class="lp-split" style="background:var(--white)">
+  <div class="container">
+    <div class="lp-split__content animate">
+      <div class="lp-split__text">
+        <div class="lp-badge">&#9679; Chiropractic Care</div>
+        <h2>When Should You See a Chiropractor for <span>Back or Neck Pain?</span></h2>
+        <p>If your pain lasts more than a few days, keeps coming back, or limits what you can do, it's worth getting evaluated. Many people wait weeks or months hoping it will go away on its own. Sometimes it does. But when it doesn't, the problem often gets worse.</p>
+        <p>Here are the signs that chiropractic care may help:</p>
+        <ul class="lp-checklist">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Pain that radiates into your arms or legs</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Stiffness in your neck or lower back that won't loosen up</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Headaches that start at the base of your skull</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Numbness or tingling in your hands or feet</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Pain that gets worse when sitting, standing, or driving for long periods</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Muscle spasms that keep returning</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Limited range of motion in your spine or joints</li>
+        </ul>
+        <p>At Novar&eacute;&trade;, your first visit starts with <a href="https://novareinjurycare.com/diagnostic-imaging/" style="color:var(--cyan)">digital x-rays</a> and a thorough exam by the doctor. We don't adjust without imaging first.</p>
+        <div class="hero__buttons" style="margin-top:24px">
+          <a href="https://novareinjurycare.com/contact" class="btn btn--cyan" style="color:#fff;background:#41BEEA">Book Your Evaluation</a>
+        </div>
+      </div>
+      <div class="lp-split__media">
+        <img src="images/chiropractic-physical-exam-novare-injury-care.webp" alt="Dr. Ivan performing chiropractic evaluation at Novar&eacute; Injury Care" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="lp-split" style="background:var(--light-bg)">
+  <div class="container">
+    <div class="lp-integrated animate">
+      <div class="lp-integrated__left">
+        <div class="lp-badge">&#9679; What Makes Us Different</div>
+        <h2>Not a Typical Chiropractic Office. <span>A Medical Corporation</span> with a Chiropractic Foundation.</h2>
+        <p>Most chiropractic visits last five to ten minutes. You get adjusted and you leave. That works for some people. But if your pain keeps coming back, or if you have an injury that's more complex than a simple misalignment, that approach falls short.</p>
+        <p>Novar&eacute;&trade; is a licensed Medical Corporation with a chiropractic foundation. What that means for you:</p>
+        <div class="hero__buttons" style="margin-top:24px">
+          <a href="https://novareinjurycare.com/contact" class="btn btn--cyan" style="color:#fff;background:#41BEEA">Book Your Evaluation</a>
+          <a href="tel:2395794444" class="btn btn--outline" style="color:#41BEEA;border:2px solid #41BEEA;background:transparent">Call : (239) 579-4444</a>
+        </div>
+      </div>
+      <div class="lp-integrated__right">
+        <div class="lp-integrated__card">
+          <div class="lp-integrated__card-icon"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h4>We Image Before We Adjust</h4>
+          <p>Every new patient gets <a href="https://novareinjurycare.com/diagnostic-imaging/" style="color:var(--cyan)">digital x-rays</a> on the first visit. When disc involvement is suspected, we coordinate MRI imaging and Dr. Ivan Bracic reads the results himself. He has post-graduate training in MRI interpretation. Your care is based on what we see, not what we guess.</p>
+        </div>
+        <div class="lp-integrated__card">
+          <div class="lp-integrated__card-icon"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <h4>More Than One Tool</h4>
+          <p>We use $25,000 flexion-distraction spinal tables for Cox Flexion Distraction technique. Most chiropractic offices use $1,000 tables. We also offer the Pro Adjuster SRT for patients who prefer instrument-assisted adjustments without manual cracking. And when adjustments alone aren't enough, we combine them with <a href="https://novareinjurycare.com/laser-treatment/" style="color:var(--cyan)">Class IV laser therapy</a>, <a href="https://novareinjurycare.com/shockwave-therapy/" style="color:var(--cyan)">shockwave therapy</a>, or rehabilitative exercises.</p>
+        </div>
+        <div class="lp-integrated__card">
+          <div class="lp-integrated__card-icon"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+          <h4>Medical Oversight</h4>
+          <p>Dr. Javier Sosa, our board-certified Medical Director, provides physician oversight for complex cases. This means we can coordinate with our neurosurgery referral network, provide EMC determinations for PIP coverage, and build recovery plans that go beyond what a standalone chiropractic office can offer.</p>
+        </div>
+        <div class="lp-integrated__card">
+          <div class="lp-integrated__card-icon"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+          <h4>Licensed Medical Corporation</h4>
+          <p>Novar&eacute; is a licensed Medical Corporation, not a chiropractic-only office. That changes what we can diagnose, treat, and coordinate under one roof.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="padding:80px 0;background:var(--white)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px">
+      <h2 style="font-size:34px;font-weight:800;color:var(--heading);margin-bottom:12px">Conditions <span style="color:var(--cyan)">We Treat</span></h2>
+      <p style="color:var(--body);font-size:16px;max-width:700px;margin:0 auto;line-height:1.7">Chiropractic adjustments address a wide range of musculoskeletal conditions. Here's what we treat most often at our Fort Myers and Lehigh Acres clinics.</p>
+    </div>
+    <div class="conditions__grid animate">
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8v32M20 12c0-2 2-4 4-4s4 2 4 4M18 20h12M16 28h16M19 36h10"/></svg></div><h4>Chronic Low Back Pain</h4><p>From sitting, lifting, or degenerative changes</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="12" r="6"/><path d="M24 18v14M18 24l6 8 6-8"/></svg></div><h4>Neck Pain &amp; Stiffness</h4><p>From posture, stress, or injury</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8v16M24 24c-8 4-12 12-12 16M24 24c8 4 12 12 12 16"/></svg></div><h4>Sciatica</h4><p>From disc herniations or nerve compression</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="18" r="10"/><path d="M18 16l3 3-3 3M27 16l3 3-3 3M14 30c2 4 6 8 10 10M34 30c-2 4-6 8-10 10"/></svg></div><h4>Headaches &amp; Migraines</h4><p>Originating from cervical spine tension</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="24" cy="24" rx="8" ry="14"/><path d="M16 24h16M24 10v28"/></svg></div><h4>Herniated or Bulging Discs</h4><p>Causing radiating pain down the arms or legs</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 20l10-10 10 10M24 10v20M14 34h20"/></svg></div><h4>Whiplash Injuries</h4><p>From <a href="https://novareinjurycare.com/accident-care/" style="color:#fff">auto accidents</a></p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="20" r="8"/><path d="M18 26l-4 14M30 26l4 14M20 20h8"/></svg></div><h4>Shoulder Pain</h4><p>From rotator cuff issues or referred spinal problems</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="18" r="10"/><path d="M20 22c0 2 2 4 4 4s4-2 4-4M16 30c2 4 5 8 8 10M32 30c-2 4-5 8-8 10"/></svg></div><h4>TMJ Disorders</h4><p>Causing jaw pain and clicking</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 14h8v20h-8z"/><path d="M14 20h4M30 20h4M14 28h4M30 28h4"/></svg></div><h4>Carpal Tunnel Syndrome</h4><p>Related to nerve compression</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="12" r="6"/><path d="M24 18v8M16 26l8 8 8-8M20 38h8"/></svg></div><h4>Sports Injuries</h4><p>Affecting the spine, joints, or soft tissue</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="10"/><path d="M20 20l8 8M28 20l-8 8"/></svg></div><h4>Arthritis Pain</h4><p>In the spine and peripheral joints</p></div>
+      <div class="condition-card"><div class="condition-card__icon"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8c-6 0-10 6-10 14s4 14 10 18c6-4 10-10 10-18S30 8 24 8z"/><path d="M20 22h8M24 18v8"/></svg></div><h4>Pregnancy Discomfort</h4><p>Lower back and pelvis pain during pregnancy</p></div>
+    </div>
+    <p style="text-align:center;max-width:800px;margin:40px auto 0;color:var(--body);font-size:16px;line-height:1.7">We treat people of all ages. And if chiropractic alone isn't the right fit, we have <a href="https://novareinjurycare.com/manual-therapy/" style="color:var(--cyan)">manual therapy</a>, <a href="https://novareinjurycare.com/laser-treatment/" style="color:var(--cyan)">laser treatment</a>, <a href="https://novareinjurycare.com/shockwave-therapy/" style="color:var(--cyan)">shockwave therapy</a>, and <a href="https://novareinjurycare.com/spinal-decompression/" style="color:var(--cyan)">spinal decompression</a> under the same roof.</p>
+  </div>
+</section>
+<section style="padding:80px 0;background:var(--light-bg)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px">
+      <h2 style="font-size:34px;font-weight:800;color:var(--heading);margin-bottom:12px">Chiropractic Techniques at <span style="color:var(--cyan)">Novar&eacute;</span></h2>
+      <p style="color:var(--body);font-size:16px;max-width:700px;margin:0 auto;line-height:1.7">Three distinct approaches, selected based on your diagnosis and comfort level.</p>
+    </div>
+    <div class="lp-steps animate">
+      <div class="lp-step">
+        <div class="lp-step__num">1</div>
+        <h3>Cox Flexion Distraction</h3>
+        <p>A gentle, non-surgical technique performed on a specially designed table that provides controlled stretching and decompression of the spine. It increases spinal mobility, reduces pressure on discs and nerves, and treats herniated discs, sciatica, and spinal stenosis. The table adjusts to accommodate patients experiencing pain, ensuring a comfortable treatment experience. Most plans involve multiple sessions for best results.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step__num">2</div>
+        <h3>Pro Adjuster SRT</h3>
+        <p>An instrument-based chiropractic tool that uses repetitive pulsing at specific frequencies instead of manual cracking. The pulsing gradually increases in intensity, stimulating mechanical receptors in joints and muscles to promote healing and relaxation. Good for patients who prefer a gentler approach or who are uncomfortable with traditional manual adjustments.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step__num">3</div>
+        <h3>Manual Spinal Adjustments</h3>
+        <p>Traditional hands-on adjustments to restore alignment, reduce nerve pressure, and improve joint mobility. Dr. Bracic has performed spinal adjustments for over 30 years and adapts his technique to each patient's condition, age, and comfort level.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <img src="images/spine-anatomy-consultation-novare.webp" alt="Dr. Ivan explaining spinal anatomy during consultation" loading="lazy" style="max-width:600px;margin:0 auto;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.1)">
+    </div>
+  </div>
+</section>
+<section class="testimonials" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px">
+      <h2 style="font-size:34px;font-weight:800;color:var(--heading);margin-bottom:12px">What Our <span style="color:var(--cyan)">Patients Say</span></h2>
+      <p style="color:var(--body);font-size:16px;max-width:700px;margin:0 auto;line-height:1.7">Over 30,000 patients treated across 30 years of practice. Here's what some of them say about chiropractic care at Novar&eacute;.</p>
+    </div>
+    <div class="testimonials__content">
+      <div class="testimonials__left">
+        <img src="images/staff-in-black-scrubs.webp" alt="Novar&eacute; team" loading="lazy">
+        <p style="color:var(--muted);font-size:14px;margin-top:12px;text-align:center">Trusted by 30,000+ patients over 30 years of experience.</p>
+      </div>
+      <div class="testimonials__right">
+        <div class="review-card">
+          <img class="review-card__avatar" src="images/dave-f-review-avatar.jpg" alt="T Pratt">
+          <div class="review-card__body">
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-card__text">&ldquo;Dr. Ivan &amp; his staff are hands down the best chiropractic services ever!!! His care, attention, knowledge, concern &amp; wisdom for his patients can't be beat.&rdquo;</p>
+            <div class="review-card__quote"><span class="review-card__quote-icon">&rdquo;</span><div><div class="review-card__name">T Pratt</div><div class="review-card__location">Fort Myers</div></div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <img class="review-card__avatar" src="images/guillermo-r-novare-injury-care-patient.webp" alt="Guillermo R.">
+          <div class="review-card__body">
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-card__text">&ldquo;Dr. Ivan discovered that a butt muscle was in spasm and strangling my sciatic nerve. He put me on his Tesla coil machines for a couple sessions and my pain went away.&rdquo;</p>
+            <div class="review-card__quote"><span class="review-card__quote-icon">&rdquo;</span><div><div class="review-card__name">Guillermo R.</div><div class="review-card__location">Fort Myers</div></div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <img class="review-card__avatar" src="images/maria-p-novare-injury-care-patient.webp" alt="Alexis S.">
+          <div class="review-card__body">
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-card__text">&ldquo;My sciatic nerve was really bothering me with this pregnancy. Dr. Ivan was able to get me in the same day... I feel brand new!&rdquo;</p>
+            <div class="review-card__quote"><span class="review-card__quote-icon">&rdquo;</span><div><div class="review-card__name">Alexis S.</div><div class="review-card__location">Lehigh Acres</div></div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <img class="review-card__avatar" src="images/maria-p-novare-injury-care-patient.webp" alt="Dylan S.">
+          <div class="review-card__body">
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-card__text">&ldquo;I have suffered with scoliosis and a multitude of bulging discs in my spine for years now due to many car accidents... I have made more healing progress in the past five months than I did in the past few years thanks to them.&rdquo;</p>
+            <div class="review-card__quote"><span class="review-card__quote-icon">&rdquo;</span><div><div class="review-card__name">Dylan S.</div><div class="review-card__location">Fort Myers</div></div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <img class="review-card__avatar" src="images/dave-f-review-avatar.jpg" alt="Magdalena F.">
+          <div class="review-card__body">
+            <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-card__text">&ldquo;Because of your testings and how you practice chiropractic, you were able to find a life threatening illness... You saved my life.&rdquo;</p>
+            <div class="review-card__quote"><span class="review-card__quote-icon">&rdquo;</span><div><div class="review-card__name">Magdalena F.</div><div class="review-card__location">Lehigh Acres</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://novareinjurycare.com/contact" class="btn btn--cyan" style="color:#fff;background:#41BEEA">Schedule Your Visit Today</a>
+    </div>
+  </div>
+</section>
+<section class="pip-window" style="background:var(--light-bg)">
+  <div class="container">
+    <div class="pip-window__layout animate">
+      <div class="pip-window__media">
+        <img src="images/chiropractic-clinic-facility-tour.webp" alt="Dr. Ivan presenting treatment rooms at Novar&eacute; Injury Care" loading="lazy">
+      </div>
+      <div class="pip-window__card">
+        <h2>Your First <span>Chiropractic Visit</span></h2>
+        <p class="pip-window__subtitle">$200 | 60 to 90 minutes with the doctor.</p>
+        <ul class="pip-window__list">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Physical exam and evaluation by Dr. Bracic</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Digital x-rays taken on-site</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> A report of findings where the doctor explains exactly what he sees</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Your x-ray images on a flash drive to take home</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Up to 2 therapy services to begin addressing your pain that day</li>
+        </ul>
+        <p style="margin-top:16px;color:var(--body);font-size:15px;line-height:1.7">If your x-rays suggest disc involvement, Dr. Bracic will coordinate MRI imaging and personally read the results before designing your treatment plan. He has specialized post-graduate training in MRI interpretation, which means you get a diagnosis based on imaging, not guesswork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="lp-split" style="background:var(--white)">
+  <div class="container">
+    <div class="lp-split__content lp-split__content--reverse animate">
+      <div class="lp-split__text">
+        <h2>For People Who <span>Cannot Afford to Stay Sidelined</span></h2>
+        <p>You have a job. A family. Responsibilities that don't pause because your back hurts. Our patients aren't looking for someone to tell them to rest and take ibuprofen. They're looking for a provider who will figure out what's wrong and build a plan to address it so they can get back to the life that depends on them.</p>
+        <p>If that sounds like you, this is the right place.</p>
+      </div>
+      <div class="lp-split__media">
+        <img src="images/family-wellness-recovery-novare-injury-care.webp" alt="Family wellness and recovery" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="final-cta" style="background-image:url('images/Doctor-with-Patients.webp')">
+  <div class="final-cta__overlay"></div>
+  <div class="final-cta__content">
+    <h2>Your Best Self <span>Is Calling</span></h2>
+    <p>Not sure where to start? Use our virtual consultation tool to share your concerns and get recommendations from home.</p>
+    <div class="final-cta__buttons">
+      <a href="https://treatment-builder.com/drivan/" class="btn btn--cyan" style="color:#fff;background:#41BEEA">Get Started</a>
+      <a href="tel:2395794444" class="btn btn--outline-white" style="color:#41BEEA;background:#fff;border:2px solid #fff">Call : (239) 579-4444</a>
+    </div>
+    <p style="margin-top:32px;font-size:15px;opacity:0.8"><strong>Dr. Ivan Bracic</strong> and our team take a whole-person approach to healing. Chiropractic care combined with medical oversight, imaging, and therapeutic technology. 30+ years. 30,000+ patients. Fort Myers, Lehigh Acres, Cape Coral, Estero, and all of Lee County. Our staff speaks English and Spanish.</p>
+  </div>
+</section>
+<section class="faq" style="background:var(--light-bg)">
+  <div class="container">
+    <div class="faq__content">
+      <div class="faq__left">
+        <h2>Chiropractic <span style="color:var(--cyan)">Questions Answered</span></h2>
+        <p>Get clear answers about chiropractic care, your first visit, and what to expect at Novar&eacute;.</p>
+      </div>
+      <div class="faq__right">
+        <div class="accordion-item active">
+          <button class="accordion-header">Do I need a referral to see a chiropractor at Novar&eacute;? <span class="accordion-header__icon">&minus;</span></button>
+          <div class="accordion-body" style="max-height:200px"><div class="accordion-body__inner">No. Call (239) 579-4444 or book online. We accept most insurance, PIP, and auto accident coverage. Walk-ins are welcome but appointments are preferred.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">How much does the first visit cost? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">$200. That covers a full exam, digital x-rays, report of findings, your images on a flash drive, and up to 2 therapy services. Plan for 60 to 90 minutes with the doctor.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Is chiropractic care safe? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">For most people, yes. Dr. Bracic always images before adjusting to rule out contraindications. We offer instrument-assisted adjustments (Pro Adjuster SRT) for patients who prefer a gentler approach. For trauma cases, we prioritize evidence-based techniques and always review imaging first.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">How many visits will I need? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">It depends on your condition. Some patients feel relief after one visit. Chronic conditions or disc injuries typically need a series of treatments over several weeks. Dr. Bracic builds your plan based on your diagnostic results, not a preset schedule.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Can chiropractic help with sciatica? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">In many cases, yes. Sciatica often results from disc herniations or nerve compression that respond well to spinal adjustments, Cox Flexion Distraction, and decompression therapy. Dr. Bracic will identify the source with imaging before recommending a treatment approach.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Do you treat auto accident injuries? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">Yes. We provide full <a href="https://novareinjurycare.com/accident-care/" style="color:rgba(255,255,255,0.85);text-decoration:underline">accident care</a> including whiplash treatment, documentation for legal cases, and coordination with personal injury attorneys. Dr. Bracic is Trauma Team Certified and has supported over 30,000 legal cases.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">What qualifies Dr. Bracic as a chiropractor? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">Doctoral degree from Life University (1993). Trauma Team Certified through the Academy of Chiropractic, Cleveland University-Kansas City. Certified Independent Chiropractic Examiner. Masters Certification in the AMA Permanent Medical Impairment Examination. Post-graduate training in MRI interpretation. Graston Technique Level 3 Certified. 30+ years of practice across Illinois and Florida. Speaks fluent Spanish.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Can children and pregnant women receive chiropractic care? <span class="accordion-header__icon">+</span></button>
+          <div class="accordion-body"><div class="accordion-body__inner">Yes. We treat patients of all ages and commonly help with pregnancy-related back pain, pediatric alignment issues, and sports injuries in young athletes. Techniques are adapted for each patient's age and condition.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="locations" style="background:var(--white)">
+  <div class="container">
+    <div class="locations__content">
+      <div class="locations__text">
+        <h2>Two Convenient Locations Serving <span style="color:var(--cyan)">Southwest Florida</span></h2>
+        <p>Chiropractic care close to home. Same-day appointments at both locations.</p>
+        <div class="service-area">
+          <h4>Service Area</h4>
+          <div class="service-area__list">
+            <span>Fort Myers</span><span>Lehigh Acres</span><span>Cape Coral</span>
+            <span>Estero</span><span>Bonita Springs</span><span>San Carlos Park</span>
+            <span>Gateway</span><span>Iona</span><span>Tice</span>
+            <span>Villas</span><span>Buckingham</span><span>Alva</span>
+          </div>
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin-top:16px">Nuestro personal habla ingl&eacute;s y espa&ntilde;ol.</p>
+      </div>
+      <div class="locations__map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1lx-2gjdlhkyOWSQuNY5E51DLVYWkwXE&ehbc=2E312F&noprof=1" allowfullscreen loading="lazy" title="Novar&eacute; Locations"></iframe>
+        <div class="loc-card" style="top:20px;left:20px">
+          <h5>Fort Myers</h5>
+          <p>15880 Summerlin Road, Suite 114</p>
+          <p>Mon, Wed, Fri: 8:00am&ndash;12:30pm &amp; 2:00pm&ndash;6:00pm<br>Tue, Thu: By Appointment Only</p>
+          <a href="https://theschedulingapp.com/NovareFortMyers" class="btn btn--cyan" style="font-size:14px;padding:8px 16px;margin-top:8px;color:#fff;background:#41BEEA">Schedule Now</a>
+        </div>
+        <div class="loc-card" style="bottom:20px;right:20px">
+          <h5>Lehigh Acres</h5>
+          <p>25 Homestead Road N., Suite 5</p>
+          <p>Tue&ndash;Thu: 8:00am&ndash;12:30pm &amp; 2:00pm&ndash;6:00pm<br>Fri: 8:00am&ndash;12:30pm</p>
+          <a href="https://theschedulingapp.com/NovareLehigh" class="btn btn--cyan" style="font-size:14px;padding:8px 16px;margin-top:8px;color:#fff;background:#41BEEA">Schedule Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="services" style="background:var(--light-bg)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px">
+      <h2 style="font-size:34px;font-weight:800;color:var(--heading);margin-bottom:12px">Most Popular <span style="color:var(--cyan)">Treatments</span></h2>
+    </div>
+    <div class="treatments-grid"><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/accident-care/" style="color:var(--cyan);text-decoration:none">Accident Care</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Auto accident, workplace, and sports injury treatment. Same-day appointments. Trauma-certified team.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/spinal-decompression/" style="color:var(--cyan);text-decoration:none">Spinal Decompression</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Non-surgical disc treatment using the DRX9000. MRI required. Dr. Bracic reads every image.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/knee-decompression/" style="color:var(--cyan);text-decoration:none">Knee Decompression</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Knee-On-Trac for meniscus tears, arthritis, ligament injuries. No injections.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/laser-treatment/" style="color:var(--cyan);text-decoration:none">Class IV Laser Therapy</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">AI-guided lasers for tissue repair and inflammation. First in Florida for next-gen AI laser research.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/shockwave-therapy/" style="color:var(--cyan);text-decoration:none">Shockwave Therapy</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Acoustic wave treatment for chronic soft tissue pain.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/manual-therapy/" style="color:var(--cyan);text-decoration:none">Manual Therapy</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Myofascial release, joint mobilization, soft tissue work.</p></div><div><h3 style="font-size:18px;font-weight:700;margin-bottom:6px"><a href="https://novareinjurycare.com/diagnostic-imaging/" style="color:var(--cyan);text-decoration:none">Diagnostic Imaging</a></h3><p style="font-size:14px;color:var(--body);line-height:1.65;margin:0">Digital x-rays with MRI coordination and in-house interpretation.</p></div></div>
+  </div>
+</section>
+</body>
+</html>
